@@ -1,0 +1,68 @@
+<!doctype html>
+<!--[if lt IE 7]>
+    <html class="no-js ie6 oldie" lang="en">
+<![endif]-->
+<!--[if IE 7]>
+    <html class="no-js ie7 oldie" lang="en">
+<![endif]-->
+<!--[if IE 8]>
+    <html class="no-js ie8 oldie" lang="en">
+<![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="{{ page.seoLang }}">
+<!--<![endif]-->
+    <head>
+        {% include "includes/head.twig" %}
+        {% include basekit.headScript %}
+    </head>
+
+    <body class="{{ page.backgroundClass }} {% block class %}{% endblock %}">
+
+        <!-- Container -->
+
+        <div class="container">
+
+            <!-- Page Content -->
+
+            <section class="template-content">
+                <!-- Header Include -->
+                {% include "includes/header.twig" %}
+
+                <!-- Main Widget Zone -->
+                {% block content %}
+                {% endblock %}
+
+                <!-- Footer Include -->
+                {% include "includes/footer.twig" %}
+            </section>
+
+            <!-- End Page Content -->
+
+        </div><!-- End Container -->
+
+
+        {% include basekit.bodyScript %}
+
+
+            <!-- Nav Menu Script -->
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+           <script>window.jQuery || document.write('<script src="{{ asset('libs/jquery-1.10.2.min.js')}}"><\/script>')
+        </script>
+
+        <script>
+            // Toggles class open to display/hide the whole navigation
+            $( ".navigation-toggle" ).click(function() {
+                $( ".bk-extendednavigation" ).toggleClass( "open" );
+            });
+            // Togglse class open to display/hide folders
+            $( ".navigation-item.folder" ).each(function() {
+                $( this ).click(function() {
+                    $( this ).toggleClass( "open" );
+                });
+            });
+        </script>
+
+    </body>
+
+</html>
