@@ -1,6 +1,7 @@
 {
     "name": "broad",
     "widgetVersion":2,
+    "thumbnail": "thumbnail.png",
     "screenshot": "screenshot.jpg",
     "templateType":"standard",
     "pageTypes": ["home"],
