@@ -234,6 +234,7 @@
             "color__feature-button--text": "@font-swatch7-color",
             "color__feature-button--background": "@color__secondary",
             "color__feature-button--background--hover": "darken(@color__secondary, 10%)",
+            "color__feature-content--background":"rgba(0,0,0,0.1)",
 
             "font__feature-headline--font-family" : "@font-swatch8-font-family",
             "font__feature-headline--font-size" : "@font-swatch8-font-size",
