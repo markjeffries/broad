@@ -258,7 +258,9 @@
             "color__image-description--text": "@font-swatch5-color"
         },
         "twitter": {
-            "color__twitter-item--background": "darken(@color__body--background, 2%)"
+            "color__twitter-item--background": "darken(@color__body--background, 2%)",
+            "color__twitter-account-name--text": "@color__secondary",
+            "color__twitter-tweet--text": "@font-swatch5-color"
         },
         "socialicons": {
             "color__socialicons--icon": "@color-swatch1",

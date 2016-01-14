@@ -851,7 +851,8 @@ button,
     .tweet-wrap {
         max-width: 80%;
     }
-    .avatar, .tweet-wrap {
+    .avatar,
+    .tweet-wrap {
         display: inline-block;
         vertical-align: top;
         @media @mobile {
@@ -860,17 +861,20 @@ button,
             margin: 0 auto;
         }
     }
-    .account-link {
-        font-family: @font-swatch5-font-family;
-        color: @color__secondary;
-        font-size: @font-swatch5-font-size;
-        font-weight: @font-swatch5-font-weight;
-        line-height: @font-swatch5-line-height;
+    .account-name {
+        font-family: @font__p--font-family;
+        color: @color__twitter-account-name--text;
+        font-size: @font__p--font-size;
+        font-weight: @font__p--font-weight;
+        line-height: @font__p--line-height;
+    }
+    .tweet-content {
+        color: @color__twitter-tweet--text;
     }
     .tweet-metadata {
         font-size: 90%;
         .timestamp, .via {
-            color: lighten(@color-swatch5, 15%)
+            color: lighten(@color__twitter-tweet--text, 15%);
         }
     }
     .timestamp {
