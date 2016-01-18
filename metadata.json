@@ -286,7 +286,7 @@
             "color__ecomproduct-price--text": "@font-swatch3-color",
             "color__ecombasket-button--background": "@color__primary",
             "color__ecombasket-button--background--hover": "@color__secondary",
-            "color__ecombasket-button--text": "@font-swatch3-color"
+            "color__ecombasket-button--text": "@font-swatch7-color"
         }
     }
 }
