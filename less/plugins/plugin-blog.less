@@ -26,12 +26,12 @@
     display: inline-block;
     margin: 1em 0;
     padding: 9px 18px;
-    color: @font-swatch7-color;
-    background-color: @font-swatch7-background-color;
+    color: @color__button--text;
+    background-color: @color__button--background;
     .border-radius(3px);
     &:hover {
         text-decoration: none;
-        background-color: @font-swatch7-background-color-hover;
+        background-color: @color__button--background-hover;
         .transition( all, 0.5s, ease );
     }
 }
@@ -191,8 +191,8 @@ time.timestamp.blogpost__timestamp {
     .button {
         padding: 9px 5px;
         margin-bottom: 20px;
-        font-size: bkscale(@font-swatch7-font-size, 0.9);
-        line-height: bkscale(@font-swatch7-line-height, 0.9);
+        font-size: bkscale(@font__button--font-size, 0.9);
+        line-height: bkscale(@font__button--line-height, 0.9);
     }
 
     // Buttons on hover
