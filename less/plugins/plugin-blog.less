@@ -87,11 +87,28 @@
     text-align: left;
 }
 
+// Post Footer
 .post-footer {
     padding: 10px 0 40px;
     border-bottom: 1px solid darken(@color__body--background, 8%);
 }
 
+.post-article:last-child .post-footer {
+    border-bottom: none;
+}
+
+.blogpost .post-footer {
+    border-bottom: none;
+}
+
+// 'older' & 'newer' buttons
+.blogpostlist .post-list-footer {
+    border-top: 1px solid darken(@color__body--background, 8%);
+    padding-top: 20px;
+    .button {
+        margin: 0 10px;
+    }
+}
 
 
 
