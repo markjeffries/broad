@@ -1,76 +1,3 @@
-// // Metadata variables
-
-// // colors
-// @color__primary: @color-swatch3;
-// @color__secondary: @color-swatch2;
-
-
-// // site
-// @color__body--background: @color-swatch1;
-// @color__link--text: @color__secondary;
-// @color__companyname--text: @font-swatch10-color;
-
-// // typography
-// @color__h1--text: @font-swatch1-color;
-// @color__h2--text: @font-swatch2-color;
-// @color__h3--text: @font-swatch3-color;
-// @color__h4--text: @font-swatch4-color;
-// @color__p--text: @font-swatch5-color;
-
-// // button
-// @color__button--background: @color__primary;
-// @color__button--background--hover: @color__secondary;
-// @color__button--text: @font-swatch7-color;
-
-// // navigation
-// @color__navigation--text: @font-swatch6-color;
-// @color__navigation--text--hover: @font-swatch6-color-hover;
-// @color__navigation--text--selected: @color__primary;
-
-// // feature
-// @color__feature-headline--text: @font-swatch8-color;
-// @color__feature-strapline--text: @font-swatch9-color;
-// @color__feature-button--text: @font-swatch7-color;
-// @color__feature-button--background: @color__secondary;
-// @color__feature-button--background--hover: darken(@color__secondary, 10%);
-
-// // forms
-// @color__form--background: darken(@color__body--background, 3%);
-// @color__form-legend--text: darken(@font-swatch5-color, 4%);
-// @color__form-legend--background: darken(@color__body--background, 6%);
-// @color__form-label--text: @font-swatch5-color;
-
-// // image
-// @color__image-title--text: @font-swatch3-color;
-// @color__image-description--text: @font-swatch5-color;
-
-// // twitter
-// @color__twitter-item--background: darken(@color__body--background, 2%);
-
-// // socialicons
-// @color__socialicons--icon: @color-swatch1;
-// @color__socialicons--icon--background: @font-swatch6-color;
-
-// // blog
-// @color__blogsearch-legend--background: @color__form-legend--background;
-// @color__blogsearch-legend--text: @color__form-legend--text;
-// @color__blogpostlist-article--background: transparent;
-// @color__blogpostlist-title--text: @color__secondary;
-// @color__blogpost-article--background: transparent;
-// @color__blogpost-title--text: @font-swatch1-color;
-
-// // ecommerce
-// @color__ecomproductslist-label--text: @color__form-label--text;
-// @color__ecomproductslist-product-title--text: @font-swatch3-color;
-// @color__ecomproduct--background: darken(@color__body--background, 3%);
-// @color__ecomproduct-images--background: transparent;
-// @color__ecomproduct-title--text: @font-swatch1-color;
-// @color__ecomproduct-price--text: @font-swatch3-color;
-// @color__ecombasket-button--background: @color__primary;
-// @color__ecombasket-button--background--hover: @color__secondary;
-// @color__ecombasket-button--text: @font-swatch7-color;
-
-
 // Template colour overrides
 body {
 	background-color: @color__body--background;
@@ -78,6 +5,15 @@ body {
 
 .company-link {
 	color: @color__companyname--text;
+	font-family: @font__companyname--font-family;
+    font-size: @font__companyname--font-size;
+    font-weight: @font__companyname--font-weight;
+    line-height: @font__companyname--line-height;
+    letter-spacing: @font__companyname--letter-spacing;
+    @media only screen and (max-width : 600px) {
+        font-size: bkscale(@font__companyname--font-size,0.8);
+        line-height: bkscale(@font__companyname--line-height,0.8);
+    }
 }
 
 a {
@@ -115,7 +51,11 @@ button,
 
 .extendednavigation {
 	&__item-name.item-name {
-		color: @color__navigation--text;
+        color: @color__navigation--text;
+        font-size: @font__navigation--font-size;
+        font-weight: @font__navigation--font-weight;
+        line-height: @font__navigation--line-height;
+        letter-spacing: @font__navigation--letter-spacing;
 		&:hover {
 			color: @color__navigation--text--hover;
 		}
