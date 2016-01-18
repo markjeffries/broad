@@ -262,6 +262,19 @@ a.company-link:hover {
         display: table;
         width: 100%;
         background-size: cover;
+        // Overlay
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: @color__feature-content--background;
+            opacity: 0.1;
+        }
     }
     .content-wrap {
         position: relative;
@@ -269,7 +282,7 @@ a.company-link:hover {
         vertical-align: middle;
         display: table-cell;
         text-align: center;
-        background-color: rgba(0,0,0,0.1);
+        z-index: 99;
         border: 20px solid rgba(255,255,255,0.1);
     }
     .headline {
