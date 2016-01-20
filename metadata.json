@@ -270,8 +270,6 @@
             "color__socialicons--icon--background": "@font-swatch6-color"
         },
         "blog": {
-            "color__blogsearch-legend--background": "@color__form-legend--background",
-            "color__blogsearch-legend--text": "@color__form-legend--text",
             "color__blogpostlist-title--text": "@color__secondary",
             "color__blogpost-title--text": "@font-swatch1-color"
         },
