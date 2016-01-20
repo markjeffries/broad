@@ -154,8 +154,8 @@ a.company-link:hover {
             right: 0;
             margin-top: 15px;
             margin-left: -13px;
-            background: @color__navigation--text--hover;
-            box-shadow: 0 6px 0 @color__navigation--text--hover;
+            background: darken(@color__navigation--background, 50%);
+            box-shadow: 0 6px 0 darken(@color__navigation--background, 50%);
             .transition( all, 0.5s, ease );
         }
         &:after {
@@ -168,12 +168,12 @@ a.company-link:hover {
             right: 0;
             margin-top: 15px;
             margin-left: -13px;
-            background: @color__navigation--text--hover;
+            background: darken(@color__navigation--background, 50%);
             .transition( all, 0.5s, ease );
         }
     }
     .navigation-toggle:hover {
-        background-color: @color__navigation--text--hover;
+        background-color: darken(@color__navigation--background, 20%);
             &:before {
                 background: @color__body--background;
                 box-shadow: 0 6px 0 @color__body--background;
@@ -185,7 +185,7 @@ a.company-link:hover {
     // Toggle Button Open State
     .open & {
         &.navigation-toggle {
-            background-color: @color__navigation--text--hover;
+            background-color: darken(@color__navigation--background, 20%);
             &:before {
                 margin-top: 21px;
                 background: @color__body--background;
