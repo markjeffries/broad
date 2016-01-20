@@ -92,12 +92,12 @@ a.company-link:hover {
 }
 
 .item-name--parent:hover:after {
-    border-top-color: @color__navigation--text-hover;
+    border-top-color: @color__navigation--text--hover;
 }
 
 // Selected nav item
 
-.navigation-item.selected > .item-name { color: @color__navigation--text-hover; }
+.navigation-item.selected > .item-name { color: @color__navigation--text--hover; }
 
 // Folder
 
@@ -154,8 +154,8 @@ a.company-link:hover {
             right: 0;
             margin-top: 15px;
             margin-left: -13px;
-            background: @color__navigation--text-hover;
-            box-shadow: 0 6px 0 @color__navigation--text-hover;
+            background: @color__navigation--text--hover;
+            box-shadow: 0 6px 0 @color__navigation--text--hover;
             .transition( all, 0.5s, ease );
         }
         &:after {
@@ -168,12 +168,12 @@ a.company-link:hover {
             right: 0;
             margin-top: 15px;
             margin-left: -13px;
-            background: @color__navigation--text-hover;
+            background: @color__navigation--text--hover;
             .transition( all, 0.5s, ease );
         }
     }
     .navigation-toggle:hover {
-        background-color: @color__navigation--text-hover;
+        background-color: @color__navigation--text--hover;
             &:before {
                 background: @color__body--background;
                 box-shadow: 0 6px 0 @color__body--background;
@@ -185,7 +185,7 @@ a.company-link:hover {
     // Toggle Button Open State
     .open & {
         &.navigation-toggle {
-            background-color: @color__navigation--text-hover;
+            background-color: @color__navigation--text--hover;
             &:before {
                 margin-top: 21px;
                 background: @color__body--background;
@@ -690,7 +690,7 @@ a.company-link:hover {
             border-radius: 0;
         }
         .button:hover {
-            color: @color__navigation--text-hover;
+            color: @color__navigation--text--hover;
             background-color: transparent;
         }
         .previous-button,
