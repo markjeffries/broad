@@ -71,6 +71,21 @@ a.company-link:hover {
     &.align-center { text-align: center; }
 }
 
+// Nav font
+
+.extendednavigation {
+    &__item-name.item-name {
+        color: @color__navigation--text;
+        font-size: @font__navigation--font-size;
+        font-weight: @font__navigation--font-weight;
+        line-height: @font__navigation--line-height;
+        letter-spacing: @font__navigation--letter-spacing;
+        &:hover {
+            color: @color__navigation--text--hover;
+        }
+    }
+}
+
 // Negative margin to align navigation to zone on desktop
 
 @media only screen and (min-width: 769px) {
@@ -97,7 +112,9 @@ a.company-link:hover {
 
 // Selected nav item
 
-.navigation-item.selected > .item-name { color: @color__navigation--text--hover; }
+.navigation-item.selected > .item-name {
+    color: @color__navigation--text--selected;
+}
 
 // Folder
 
@@ -108,6 +125,7 @@ a.company-link:hover {
     min-width: 200px;
     white-space: normal;
     border: 1px solid darken(@color__body--background, 7%);
+    background-color: @color__body--background;
     // Padding for folder list and folder items on desktop
     @media only screen and (min-width: 769px) {
         padding: 7px 0;
@@ -301,8 +319,9 @@ a.company-link:hover {
     }
     .button {
         margin: 1em 0;
-        border-bottom: 3px solid darken(@color__feature-button--background, 10%);
+        color: @color__feature-button--text;
         background-color: @color__feature-button--background;
+        border-bottom: 3px solid darken(@color__feature-button--background, 10%);
     }
     .button:hover {
         border-bottom: 3px solid darken(@color__feature-button--background--hover, 8%);
@@ -444,8 +463,8 @@ a.company-link:hover {
         padding: 10px;
         .image-title,
         .image-description {
-            font-size: bkscale(@font-swatch5-font-size, .9);
-            line-height: bkscale(@font-swatch5-line-height, .9);
+            font-size: bkscale(@font__p--font-size, .9);
+            line-height: bkscale(@font__p--line-height, .9);
         }
     }
 }
@@ -613,11 +632,11 @@ a.company-link:hover {
     .image-description {
         color: @color__body--background;
         @media @tablet {
-            font-size: bkscale(@font-swatch5-font-size,0.9);
+            font-size: bkscale(@font__p--font-size,0.9);
             line-height: bkscale(@font__feature-strapline--line-height,0.9);
         }
         @media @mobile {
-            font-size: bkscale(@font-swatch5-font-size,0.8);
+            font-size: bkscale(@font__p--font-size,0.8);
             line-height: bkscale(@font__feature-strapline--line-height,0.8);
         }
     }
@@ -777,7 +796,10 @@ button,
     .border-radius(3px);
     .transition( all, 0.5s, ease );
     cursor: pointer;
+    background-color: @color__button--background;
+    color: @color__button--text;
     &:hover {
+        background-color: @color__button--background--hover;
     }
 }
 
@@ -928,11 +950,11 @@ hr {
         padding: 0 8em 0;
     }
     h1,h2,h3,p {
-        font-family: @font-swatch5-font-family;
-        color: @font-swatch5-color;
-        font-size: @font-swatch5-font-size;
-        font-weight: @font-swatch5-font-weight;
-        line-height: @font-swatch5-line-height;
+        font-family: @font__p--font-family;
+        color: @color__p--text;
+        font-size: @font__p--font-size;
+        font-weight: @font__p--font-weight;
+        line-height: @font__p--line-height;
     }
     // Twitter
     .tweet-item {

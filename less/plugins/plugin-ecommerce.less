@@ -14,6 +14,8 @@
 // 4. #BASKET SUMMARY
 
 
+
+
 // -------------------------------
 // 1. #Single Product
 // -------------------------------
@@ -61,6 +63,19 @@
     @media only screen and (min-width: 900px) {
         display: inline-block;
         width: 45%;
+    }
+}
+
+.ecomproduct {
+    .image-link,
+    .gallery-item {
+        background-color: @color__ecomproduct-images--background;
+    }
+    .product-title {
+        color: @color__ecomproduct-title--text;
+    }
+    .product-price {
+        color: @color__ecomproduct-price--text;
     }
 }
 
@@ -141,6 +156,12 @@
 .ecomproductslist,
 .ecomfeaturedproducts {
     text-align: center;
+    .label {
+        color: @color__ecomproductslist-label--text;
+    }
+    .product-item-title .title-link {
+        color: @color__ecomproductslist-product-title--text;
+    }
 }
 
 .listing-title {
@@ -224,12 +245,12 @@
 .ecomfeaturedproducts {
     .title-link,
     .listing-order {
-        font-family:@font-swatch5-font-family;
-        font-size:@font-swatch5-font-size;
-        line-height:@font-swatch5-line-height;
-        font-weight: @font-swatch5-font-weight;
-        color: @font-swatch3-color;
-        letter-spacing: @font-swatch5-letter-spacing;
+        font-family:@font__p--font-family;
+        font-size:@font__p--font-size;
+        line-height:@font__p--line-height;
+        font-weight: @font__p--font-weight;
+        color: @color__h3--text;
+        letter-spacing: @font__p--letter-spacing;
     }
 }
 
@@ -510,4 +531,13 @@
     padding-bottom: 35px;
 }
 
+.ecombasket {
+    button.button {
+        background-color: @color__ecombasket-button--background;
+        color: @color__ecombasket-button--text;
+        &:hover {
+            background-color: @color__ecombasket-button--background--hover;
+        }
+    }
+}
 
