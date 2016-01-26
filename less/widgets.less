@@ -65,19 +65,15 @@ a.company-link:hover {
 // Widget Overlay
 .widget__extendednavigation {
     + .widget-overlay {
-        display: none;
+        @media @tablet {
+            display: none;
+        }
     }
 
     &.open + .widget-overlay {
-        position: fixed!important;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
         z-index: 10400!important;
         display: block;
-        max-width: 500px;
-        margin: 13% auto;
+        margin: 44px auto 0;
 
         @media @mobile {
             width: 90%;
