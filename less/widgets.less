@@ -293,8 +293,8 @@ a.company-link:hover {
     }
     .background-image,
     .content-wrap {
-        min-height: 500px;
-        height: 500px;
+        min-height: @value__feature--height--desktop;
+        height: @value__feature--height--desktop;
     }
     .background-image {
         display: table;
@@ -311,7 +311,7 @@ a.company-link:hover {
             bottom: 0;
             left: 0;
             background-color: @color__feature-content--background;
-            opacity: 0.3;
+            opacity: @value__feature--content--background--opacity;
         }
     }
     .content-wrap {
@@ -354,8 +354,8 @@ a.company-link:hover {
     .feature {
         .background-image,
         .content-wrap {
-            min-height: 350px;
-            height: 350px;
+            min-height: @value__feature--height--tablet;
+            height: @value__feature--height--tablet;
         }
         .headline {
             font-size: bkscale(@font__feature-headline--font-size, .8);
@@ -373,8 +373,8 @@ a.company-link:hover {
     .feature {
         .background-image,
         .content-wrap {
-            min-height: 250px;
-            height: 250px;
+            min-height: @value__feature--height--mobile;
+            height: @value__feature--height--mobile;
         }
         .content-wrap {
             padding: 15px;

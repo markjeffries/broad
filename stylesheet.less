@@ -36,7 +36,9 @@
 @import "@{templateLocal}/less/plugins/plugin-menu.less"; // Plugin: Menu CSS
 @import "@{templateLocal}/less/plugins/plugin-ecommerce.less"; // Plugin: Ecommerce CSS
 
-@import "@{templateLocal}/less/variables.less";
+@import "@{templateLocal}/less/fork-variables.less"; // Forked Templates
+
+
 
 
 // -----------------------------
@@ -48,12 +50,54 @@
 // --------------
 
 
-.container {
-    width: 90%;
-    margin: 0 5%;
+.site-container {
+    width: auto;
     @media only screen and (min-width: 1140px) {
-        width: 960px; // 1140px - 10% for margins
+        width: @value__container--width;
         margin: 0 auto;
+    }
+}
+
+
+
+
+// Widgets
+// -------
+
+.widget {
+    width: 90%;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-top: 0;
+    margin-bottom: 20px;
+    @media only screen and (min-width: 1140px) {
+        width: @value__widget--width;
+        margin: @value__widget--margin--desktop;
+    }
+}
+
+// Widgets in Responsive Columns
+.site-container {
+    // Two Columns
+    .columns-two-left,
+    .columns-two-right,
+    // Three Columns
+    .columns-three-left,
+    .columns-three-middle,
+    .columns-three-right,
+    // Four Columns
+    .columns-four-first,
+    .columns-four-second,
+    .columns-four-third,
+    .columns-four-fourth {
+        .widget {
+            width: auto;
+            margin: 10px 0;
+            @media only screen and (min-width: 1140px) {
+                width: auto;
+                margin: 10px auto;
+            }
+        }
     }
 }
 
