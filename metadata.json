@@ -235,6 +235,7 @@
             "color__feature-button--text": "@font-swatch7-color",
             "color__feature-button--background": "@color__secondary",
             "color__feature-button--background--hover": "darken(@color__secondary, 10%)",
+            "color__feature-button--border": "transparent",
             "color__feature-content--background":"#000000",
 
 
