@@ -15,10 +15,6 @@
 // Posts List
 // ----------
 
-.bk-blogpostlist {
-    text-align: center;
-}
-
 .blogpostlist .title-link {
     color: @color__blogpostlist-title--text;
 }
@@ -48,8 +44,25 @@
 
 // Older & Newer buttons
 
-.blogpostlist .pagination-item {
-    display: inline-block;
+.blogpostlist .post-list-footer {
+    .pagination-list {
+        display: inline-block;
+        width: 100%;
+        .pagination-item:first-child {
+            float: left;
+        }
+        .pagination-item:last-child {
+            float: right;
+        }
+    }
+    .button {
+        padding: 4px 12px;
+        background-color: @color__button--background--hover;
+        &:hover {
+            background-color: @color__button--background;
+
+        }
+    }
 }
 
 
@@ -102,15 +115,6 @@
 
 .blogpost .post-footer {
     border-bottom: none;
-}
-
-// 'older' & 'newer' buttons
-.blogpostlist .post-list-footer {
-    border-top: 1px solid darken(@color__body--background, 8%);
-    padding-top: 20px;
-    .button {
-        margin: 0 10px;
-    }
 }
 
 
