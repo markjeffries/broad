@@ -197,8 +197,8 @@
             "color__feature-headline--text": "@font-swatch8-color",
             "color__feature-strapline--text": "@font-swatch9-color",
             "color__feature-button--text": "@font-swatch7-color",
-            "color__feature-button--background": "@color__secondary",
-            "color__feature-button--background--hover": "darken(@color__secondary, 10%)",
+            "color__feature-button--background": "transparent",
+            "color__feature-button--background--hover": "transparent",
             "color__feature-button--border": "#ffffff",
             "color__feature-content--background":"#000000",
 
