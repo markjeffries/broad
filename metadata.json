@@ -220,8 +220,8 @@
             "color__form-label--text": "@font-swatch5-color"
         },
         "image": {
-            "color__image-title--text": "@font-swatch4-color",
-            "color__image-description--text": "@font-swatch5-color"
+            "color__image-title--text": "@color-swatch4",
+            "color__image-description--text": "@color-swatch5"
         },
         "twitter": {
             "color__twitter-item--background": "darken(@color__body--background, 2%)",
