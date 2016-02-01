@@ -83,6 +83,17 @@ a.company-link:hover {
     }
 }
 
+// Remove margin from ul nav list and widget
+
+.widget[data-widget-type="extendednavigation"] {
+    margin-bottom: 10px;
+}
+
+.navigation-list {
+    margin: 0;
+    background-color: @color__navigation--background;
+}
+
 // Navigation alignment
 
 .extendednavigation {
@@ -145,7 +156,7 @@ a.company-link:hover {
     min-width: 200px;
     white-space: normal;
     border: 1px solid darken(@color__body--background, 7%);
-    background-color: @color__body--background;
+    background-color: @color__navigation--background;
     // Padding for folder list and folder items on desktop
     @media only screen and (min-width: 769px) {
         padding: 7px 0;
@@ -177,7 +188,7 @@ a.company-link:hover {
         height: 45px;
         text-indent: -9999px;
         line-height: 0;
-        background-color: @color__navigation--background;
+        background-color: darken(@color__navigation--background, 10%);
         -webkit-border-radius: 0;
         -moz-border-radius: 0;
         border-radius: 0;
@@ -226,7 +237,7 @@ a.company-link:hover {
             background-color: darken(@color__navigation--background, 10%);
             &:before {
                 margin-top: 21px;
-                background: @color__body--background;
+                background: darken(@color__navigation--background, 50%);
                 box-shadow: none;
                 -webkit-transform: rotate(45deg);
                 -moz-transform: rotate(45deg);
@@ -245,7 +256,7 @@ a.company-link:hover {
                 right: 0;
                 margin-top: 21px;
                 margin-left: -13px;
-                background: @color__body--background;
+                background: darken(@color__navigation--background, 50%);
                 box-shadow: none;
                 -webkit-transform: rotate(-45deg);
                 -moz-transform: rotate(-45deg);
@@ -253,6 +264,12 @@ a.company-link:hover {
                 -ms-transform: rotate(-45deg);
                 transform: rotate(-45deg);
                 .transition( all, 0.5s, ease );
+            }
+        }
+        &.navigation-toggle:hover {
+            &:before,
+            &:after {
+                background: @color__body--background;
             }
         }
     }
