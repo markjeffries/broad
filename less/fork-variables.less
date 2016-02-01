@@ -32,12 +32,6 @@
 // Template Overrides
 // ------------------------------------------------
 
-// body { // Same as floating footer
-//     @media only screen and (max-width : 1024px) {
-//         background-color: darken(@color__body--background, 70%);
-//     }
-// }
-
 .site-container {
     @media only screen and (min-width : 1024px) {
         background-color: darken(@color__body--background, 20%);
@@ -49,7 +43,9 @@
     width: 100%;
     max-width: 1500px;
     margin: 0 auto;
-    background: @color__body--background;
+    @media only screen and (min-width : 1024px) {
+        background: @color__body--background;
+    }
 }
 
 // Extended Nav
