@@ -128,6 +128,14 @@ body {
             font-size: @font__feature-headline--font-size;
             font-weight: @font__feature-headline--font-weight;
             line-height: @font__feature-headline--line-height;
+            @media @tablet {
+                font-size: bkscale(@font__feature-headline--font-size, .8);
+                line-height: bkscale(@font__feature-headline--line-height, .8);
+            }
+            @media @mobile {
+                font-size: bkscale(@font__feature-headline--font-size, .6);
+                line-height: bkscale(@font__feature-headline--line-height, .6);
+            }
         }
         .image-description {
             font-family: @font__feature-strapline--font-family;
@@ -135,6 +143,14 @@ body {
             font-size: @font__feature-strapline--font-size;
             font-weight: @font__feature-strapline--font-weight;
             line-height: @font__feature-strapline--line-height;
+            @media @tablet {
+                font-size: bkscale(@font__feature-strapline--font-size, .9);
+                line-height: bkscale(@font__feature-strapline--line-height, .9);
+            }
+            @media @mobile {
+                font-size: bkscale(@font__feature-strapline--font-size, .8);
+                line-height: bkscale(@font__feature-strapline--line-height, .8);
+            }
         }
         .image-title,
         .image-description {
@@ -147,8 +163,23 @@ body {
 // Slideshow buttons
 .slide-navigation .pause-toggle {
     @media only screen and (min-width: 480px) {
-        bottom: 0;
-        height: auto;
+        position: relative;
+        width: 100%;
+        top: 380px;
+        right: inherit;
+        width: 40px;
+        height: 40px;
+        &.icon--pause:before {
+            padding: 10px;
+            font-size: 12px;
+            background-color: fade(@color-swatch4, 50%);
+            -webkit-border-radius: 50px;
+            -moz-border-radius: 50px;
+            border-radius: 50px;
+        }
+    }
+    @media @tablet {
+        top: 300px;
     }
 }
 // Slideshow Height
@@ -163,6 +194,22 @@ body {
         min-height: 250px;
     }
 }
+
+.slide-navigation {
+    @media @mobile {
+        min-height: inherit;
+        .button {
+            padding: 4px 12px;
+            width: 40px;
+            height: 40px;
+        }
+        .icon:before,
+        .icon:after {
+            font-size: 12px;
+        }
+    }
+}
+
 
 // Gallery Image Captions
 // ----------------------
