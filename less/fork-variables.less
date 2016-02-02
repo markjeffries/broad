@@ -37,13 +37,16 @@
 
 html {
     background-color: darken(@color__body--background, 20%);
+    @media only screen and (max-width : 1024px) {
+        background-color: darken(@color__body--background, 70%);
+    }
 }
 
 body {
     width: 100%;
     max-width: 1500px;
     margin: 0 auto;
-    background: @color__body--background;
+    background-color: @color__body--background;
 }
 
 // Extended Nav
