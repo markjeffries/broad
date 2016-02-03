@@ -216,7 +216,7 @@
             "font__feature-strapline--letter-spacing" : "@font-swatch9-letter-spacing"
         },
         "forms": {
-            "color__form-legend--text": "darken(@font-swatch5-color, 4%)",
+            "color__form-legend--text": "@color-swatch4",
             "color__form-label--text": "@font-swatch5-color"
         },
         "image": {
