@@ -86,26 +86,28 @@ body {
 // Full width widgets
 // ------------------------
 [data-widget-type="extendednavigation"],
-[data-widget-type="feature"],
-[data-widget-type="profile"] {
+[data-widget-type="feature"] {
     &.widget {
         width: 100%;
         margin: 0 auto 20px;
     }
 }
 
-[data-widget-type="profile"] {
-    &.widget {
-        padding: 0 20px;
-        @media @tablet {
-            width: 90%;
-            margin-right: 5%;
-            margin-left: 5%;
-            margin-top: 0;
-            margin-bottom: 20px;
-            padding: 0;
-        }
+[data-widget-type="profile"].widget {
+    padding: 0 20px;
+    @media @tablet {
+        width: 90%;
+        margin-right: 5%;
+        margin-left: 5%;
+        margin-top: 0;
+        margin-bottom: 20px;
+        padding: 0;
     }
+}
+
+[data-widget-type="profile"].widget {
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 
@@ -416,8 +418,11 @@ button,
     }
     .address-line,
     h1, h2, h3, h4, p,
-    .phone-number-link {
+    .icon--phone:before,
+    .phone-number-link,
+    .phone-number {
         color: @color__body--background;
+        padding-bottom: 0;
     }
     // twitter
     .profile .tweet-item {
