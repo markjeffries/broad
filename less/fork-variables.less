@@ -9,7 +9,7 @@
 
 // Global Widget
 @value__widget--width: 960px;
-@value__widget--margin--desktop: 10px auto;
+@value__widget--margin--desktop: 0 auto 20px;
 
 
 // Feature
@@ -49,16 +49,6 @@ body {
     background-color: @color__body--background;
 }
 
-.template-header {
-    padding: 3em 0 0em;
-    @media @tablet {
-        padding: 2em 0 0em;
-        .brand {
-            margin: 0 0 2em;
-        }
-    }
-}
-
 // Extended Nav
 
 .extendednavigation {
@@ -66,6 +56,29 @@ body {
         margin-left: 0;
         margin-right: 0;
     }
+}
+
+// Page title in default pages
+
+.widget[data-widget-type="pagetitle"] {
+    width: 100%;
+    margin: 0 auto 20px;
+}
+
+.pagetitle {
+    display: inline-block;
+    width: 100%;
+    padding-top: 8px;
+    text-align: center;
+    background: darken(@color__body--background, 8%);
+    h1 {
+        font-size: 22px;
+    }
+}
+
+.template-default .template-header {
+    margin-bottom: 0;
+    border: none;
 }
 
 // Feature
