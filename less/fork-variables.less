@@ -58,27 +58,17 @@ body {
     }
 }
 
-// Page title in default pages
+// Template Header
+// ------------------------
 
-.widget[data-widget-type="pagetitle"] {
-    width: 100%;
-    margin: 0 auto 20px;
-}
-
-.pagetitle {
-    display: inline-block;
-    width: 100%;
-    padding-top: 8px;
-    text-align: center;
-    background: darken(@color__body--background, 8%);
-    h1 {
-        font-size: 22px;
+.template-header {
+    padding: 2.5em 0 0em;
+    @media @tablet {
+        padding: 2em 0 0em;
+        .brand {
+            margin: 0 0 2em;
+        }
     }
-}
-
-.template-default .template-header {
-    margin-bottom: 0;
-    border: none;
 }
 
 // Feature
