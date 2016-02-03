@@ -186,10 +186,9 @@ body {
         &.icon--pause:before {
             padding: 10px;
             font-size: 12px;
-            background-color: fade(@color-swatch4, 50%);
-            -webkit-border-radius: 50px;
-            -moz-border-radius: 50px;
-            border-radius: 50px;
+            color: @color-swatch5;
+            background-color: fade(@color-swatch1, 10%);
+
         }
     }
     @media @tablet {
@@ -210,6 +209,12 @@ body {
 }
 
 .slide-navigation {
+    .icon--previous:before,
+    .icon--next:after {
+        padding: 30px 8px;
+        color: @color-swatch5;
+        background-color: fade(@color-swatch1, 10%);
+    }
     @media @mobile {
         min-height: inherit;
         .button {
