@@ -955,6 +955,8 @@ button,
     }
     .tweet-content {
         color: @color__twitter-tweet--text;
+        word-wrap: break-word;
+        word-break: break-word;
     }
     .tweet-metadata {
         font-size: 90%;
@@ -967,7 +969,24 @@ button,
     }
 }
 
-
+// Responsive columns
+.columns-four-first,
+.columns-four-second,
+.columns-four-third,
+.columns-four-fourth,
+.columns-three-left,
+.columns-three-middle,
+.columns-three-right {
+    .tweet-item {
+        padding: 1em;
+    }
+    .avatar,
+    .tweet-wrap {
+        max-width: 100%;
+        width: auto;
+        margin: 0 auto;
+    }
+}
 
 
 // -----------------------------
