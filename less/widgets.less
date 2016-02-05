@@ -640,6 +640,17 @@ a.company-link:hover {
 // ----------------
 
 // Slideshow Height
+.slides-list {
+    max-height: 400px;
+    overflow: hidden;
+    @media @tablet {
+        max-height: 300px;
+    }
+    @media @mobile {
+        max-height: 200px;
+    }
+}
+
 .slides-list,
 .responsiveslideshow .figure {
     position: relative;
