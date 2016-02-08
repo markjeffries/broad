@@ -22,11 +22,11 @@
     {
         "Swatch 1": {
             "color1":"#ffffff",
-            "color2":"#07DEC3",
-            "color3":"#1ab29f",
+            "color2":"#07C7E1",
+            "color3":"#4d4d4d",
             "color4":"#4e4e4e",
-            "color5":"#7e7f82",
-            "color6":"#a8a7a7",
+            "color5":"#95969A",
+            "color6":"#95969A",
             "color7":"#ffffff"
         }
     },
@@ -111,9 +111,9 @@
         },
         "font10": {
             "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
-            "font-size": "30px",
+            "font-size": "36px",
             "font-weight": "400",
-            "line-height": "40px",
+            "line-height": "46px",
             "color": "@color-swatch4",
             "letter-spacing": "0px"
         }

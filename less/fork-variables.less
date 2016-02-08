@@ -8,8 +8,8 @@
 
 
 // Global Widget
-@value__widget--width: 90%;
-@value__widget--margin--desktop: 0 5% 20px;
+@value__widget--width: 800px;
+@value__widget--margin--desktop: 0 auto 20px;
 
 
 // Feature
@@ -42,8 +42,11 @@ html {
 body {
     width: 100%;
     max-width: 1500px;
-    margin: 0 auto;
+    margin: 10px auto 0;
     background-color: @color__body--background;
+    @media only screen and (max-width: 1500px) {
+        margin: 5px auto 0;
+    }
 }
 
 
@@ -52,6 +55,17 @@ body {
 
 .template-header {
     padding: 3em 0 1em;
+    @media @tablet {
+        padding: 2em 0 1em;
+        .brand {
+            margin-bottom: 2em;
+        }
+    }
+}
+
+.template-default .template-header {
+    margin-bottom: 0;
+    border: none;
 }
 
 // Extended Nav
@@ -64,28 +78,10 @@ body {
     }
 }
 
-// Page title in default pages
-
-.widget[data-widget-type="pagetitle"] {
-    width: 100%;
-    margin: 0 auto 20px;
-}
-
-.pagetitle {
-    display: inline-block;
-    width: 100%;
-    padding-top: 8px;
-    text-align: center;
-    background: darken(@color__body--background, 8%);
-    h1 {
-        font-size: 22px;
-    }
-}
-
-.template-default .template-header {
-    margin-bottom: 0;
-    border: none;
-}
+// .navigation-toggle {
+//     width: 44px;
+//     margin: 0 auto;
+// }
 
 // Feature
 // ------------------------
@@ -142,46 +138,10 @@ body {
 // ------------------------
 .responsiveslideshow {
     position: relative;
-    .figure {
-        display: table;
-        width: 100%;
-    }
     .caption {
-        position: relative;
         width: 100%;
-        vertical-align: middle;
-        display: table-cell;
+        margin: 0 auto;
         text-align: center;
-        .image-title {
-            font-family: @font__feature-headline--font-family;
-            color: @color__feature-headline--text;
-            font-size: @font__feature-headline--font-size;
-            font-weight: @font__feature-headline--font-weight;
-            line-height: @font__feature-headline--line-height;
-            @media @tablet {
-                font-size: bkscale(@font__feature-headline--font-size, .8);
-                line-height: bkscale(@font__feature-headline--line-height, .8);
-            }
-            @media @mobile {
-                font-size: bkscale(@font__feature-headline--font-size, .6);
-                line-height: bkscale(@font__feature-headline--line-height, .6);
-            }
-        }
-        .image-description {
-            font-family: @font__feature-strapline--font-family;
-            color: @color__feature-strapline--text;
-            font-size: @font__feature-strapline--font-size;
-            font-weight: @font__feature-strapline--font-weight;
-            line-height: @font__feature-strapline--line-height;
-            @media @tablet {
-                font-size: bkscale(@font__feature-strapline--font-size, .9);
-                line-height: bkscale(@font__feature-strapline--line-height, .9);
-            }
-            @media @mobile {
-                font-size: bkscale(@font__feature-strapline--font-size, .8);
-                line-height: bkscale(@font__feature-strapline--line-height, .8);
-            }
-        }
         .image-title,
         .image-description {
             max-width: 600px;
@@ -193,30 +153,18 @@ body {
 // Slideshow buttons
 .slide-navigation .pause-toggle {
     @media only screen and (min-width: 480px) {
-        position: relative;
-        width: 100%;
-        top: 380px;
-        right: inherit;
-        width: 40px;
-        height: 40px;
         &.icon--pause:before {
             padding: 10px;
             font-size: 12px;
             background-color: fade(@color-swatch4, 50%);
-            -webkit-border-radius: 50px;
-            -moz-border-radius: 50px;
-            border-radius: 50px;
         }
-    }
-    @media @tablet {
-        top: 300px;
     }
 }
 // Slideshow Height
 .slides-list,
 .responsiveslideshow .figure,
 .slide-navigation {
-    min-height: 450px;
+    min-height: 550px;
     @media @tablet {
         min-height: 350px;
     }
@@ -250,6 +198,13 @@ body {
     margin-bottom: -100%;
     overflow: hidden;
     border: none;
+    .image-title,
+    .image-description {
+        @media @tablet {
+            font-size: 13px;
+            line-height: 21px;
+        }
+    }
 }
 
 .gallery__figure {
@@ -259,6 +214,12 @@ body {
 
 .gallery__figure:hover .gallery__caption {
     margin-bottom: 0;
+}
+
+.gallery__gallery-item {
+    @media only screen and (max-width: 600px) {
+        width: 100%;
+    }
 }
 
 .gallery__image-link {
@@ -276,7 +237,7 @@ body {
         height: 210px;
     }
     @media only screen and (max-width: 600px) {
-        height: 160px;
+        height: 180px;
     }
 }
 
@@ -383,22 +344,9 @@ td,
     padding: 0;
 }
 
-// Buttons
-// -----------------------------
-
-button,
-.button,
-.read-more,
-.signupform__button,
-.blogsearch__button,
-.ecomproductslist__button {
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    border-radius: 50px;
-}
-
 
 // Footer
+// -------------------------------
 
 .template-footer {
     width: 100%;
