@@ -38,6 +38,9 @@
 
 html {
     background-color: darken(@color__body--background, 70%);
+    @media only screen and (max-width: 1500px) {
+        background-color: darken(@color__body--background, 10%);
+    }
 }
 
 body {
@@ -46,7 +49,8 @@ body {
     margin: 10px auto 0;
     background-color: @color__body--background;
     @media only screen and (max-width: 1500px) {
-        margin: 5px auto 0;
+        margin: 0 auto;
+        border-top: 5px solid darken(@color__body--background, 70%);
     }
 }
 
@@ -98,11 +102,6 @@ body {
     width: 100%;
 }
 
-[data-widget-type="profile"].widget {
-    margin-bottom: 0;
-    padding-bottom: 0;
-}
-
 // Margin in header widgets
 // -------------------------------
 
@@ -119,15 +118,25 @@ body {
 
 .responsiveslideshow {
     position: relative;
+    .figure {
+        background-color: transparent;
+    }
     .caption {
         width: 100%;
         margin: 0 auto;
         text-align: center;
+        background-color: #ffffff;
         .image-title,
         .image-description {
             max-width: 600px;
             margin: 0 auto;
             padding: 0 20px;
+        }
+        .image-title {
+            color: @color-swatch4;
+        }
+        .image-description {
+            color: @color-swatch5;
         }
     }
 }
@@ -330,3 +339,62 @@ td,
     }
 }
 
+// Footer
+// -------------------------------
+
+.template-footer {
+    width: 100%;
+    max-width: 1500px;
+    margin: 50px auto 0;
+    border-top: none;
+    background-color: darken(@color__body--background, 10%);
+    @media @mobile {
+        padding: 1em 0;
+        margin: 0 auto;
+    }
+    .profile .social-list {
+        margin-top: inherit;
+    }
+    .social-list {
+        margin-top: inherit;
+    }
+    .social-item {
+        background-color: transparent;
+        .social-link {
+            &:before {
+                font-size: 17px;
+                color: @color-swatch4;
+            }
+            &:hover:before {
+                color: @color-swatch5;
+            }
+        }
+    }
+    .address-line,
+    h1, h2, h3, h4, p,
+    .icon--phone:before,
+    .phone-number-link,
+    .phone-number {
+        color: @color__body--background;
+        padding-bottom: 0;
+    }
+    // twitter
+    .profile .tweet-item {
+        background-color: transparent;
+    }
+    .account-link,
+    .tweet-item .tweet-content {
+        color: @color__body--background;
+    }
+    // signup form
+    .profile .signupform .form-body {
+        padding: 0;
+    }
+    .profile .signupform .form {
+        background-color: transparent;
+        .fieldset .label {
+            color: @color__body--background;
+            background-color: transparent;
+        }
+    }
+}
