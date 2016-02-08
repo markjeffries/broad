@@ -125,7 +125,7 @@ body {
         width: 100%;
         margin: 0 auto;
         text-align: center;
-        background-color: #ffffff;
+        background-color: rgba(255,255,255,0.8);
         .image-title,
         .image-description {
             max-width: 600px;
@@ -141,15 +141,87 @@ body {
     }
 }
 // Slideshow buttons
-.slide-navigation .pause-toggle {
-    @media only screen and (min-width: 480px) {
-        &.icon--pause:before {
-            padding: 10px;
-            font-size: 12px;
-            background-color: fade(@color-swatch4, 50%);
+
+.slide-navigation {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    .button {
+        color: @color-swatch5;
+        padding: 0;
+        outline: 0;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+        border: none;
+    }
+    .button:hover {
+        color: @color-swatch1;
+        background-color: transparent;
+        border: none;
+    }
+    .icon--pause:before {
+        content: "\f04b";
+    }
+    .icon--play:before,
+    .icon--pause.pause:before {
+        content: "\f04c";
+    }
+    .previous-button,
+    .next-button,
+    .pause-toggle {
+        position: absolute;
+        top: 0;
+        width: 50px;
+        height: 100%;
+        background-color: transparent;
+        &:hover:before,
+        &:hover:after {
+            background-color: fade(@color-swatch5, 50%);
+            -webkit-border-radius: 50px;
+            -moz-border-radius: 50px;
+            border-radius: 50px;
         }
     }
+    .previous-button:hover:before {
+        padding: 8px 12px 7px 10px;
+    }
+    .next-button:hover:after {
+        padding: 8px 10px 7px 12px;
+    }
+    .pause-toggle:hover:before {
+        padding: 8px 10px;
+    }
+    .control-text {
+        font-size: 0;
+        width: 30px;
+        height: 30px;
+        &:hover {
+            display: block;
+        }
+    }
+    .previous-button {
+        left: 25px;
+        transform: translate(-50%);
+        -webkit-transform: translate(-50%);
+        -ms-transform: translate(-50%);
+    }
+    .next-button {
+        right: 25px;
+        transform: translate(50%);
+        -webkit-transform: translate(50%);
+        -ms-transform: translate(50%);
+    }
+    .pause-toggle {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+    }
 }
+
 // Slideshow Height
 .slides-list,
 .responsiveslideshow .figure,
