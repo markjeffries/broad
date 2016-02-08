@@ -8,8 +8,8 @@
 
 
 // Global Widget
-@value__widget--width: 960px;
-@value__widget--margin--desktop: 0 auto 20px;
+@value__widget--width: 90%;
+@value__widget--margin--desktop: 0 5% 20px;
 
 
 // Feature
@@ -22,8 +22,8 @@
 
 // Footer
 
-@color__footer--border: @color__body--background;
-@color__footer--background: darken(@color__body--background, 70%);
+@color__footer--border: darken(@color__body--background, 10%);
+@color__footer--background: @color__body--background;
 
 
 
@@ -36,10 +36,7 @@
 // Body Background
 
 html {
-    background-color: darken(@color__body--background, 8%);
-    @media only screen and (max-width : 1024px) {
-        background-color: darken(@color__body--background, 70%);
-    }
+    background-color: darken(@color__body--background, 70%);
 }
 
 body {
@@ -49,7 +46,16 @@ body {
     background-color: @color__body--background;
 }
 
+
+// Header
+// ------------------------
+
+.template-header {
+    padding: 3em 0 1em;
+}
+
 // Extended Nav
+// ------------------------
 
 .extendednavigation {
     @media only screen and (min-width: 769px) {
@@ -58,19 +64,28 @@ body {
     }
 }
 
-// Template Header
-// ------------------------
+// Page title in default pages
 
-.template-header {
-    padding: 2.5em 0 0em;
-    @media @tablet {
-        padding: 2em 0 0em;
-        .brand {
-            margin: 0 0 2em;
-        }
+.widget[data-widget-type="pagetitle"] {
+    width: 100%;
+    margin: 0 auto 20px;
+}
+
+.pagetitle {
+    display: inline-block;
+    width: 100%;
+    padding-top: 8px;
+    text-align: center;
+    background: darken(@color__body--background, 8%);
+    h1 {
+        font-size: 22px;
     }
 }
 
+.template-default .template-header {
+    margin-bottom: 0;
+    border: none;
+}
 
 // Feature
 // ------------------------
@@ -85,31 +100,43 @@ body {
 
 // Full width widgets
 // ------------------------
-[data-widget-type="extendednavigation"],
-[data-widget-type="feature"] {
+[data-name="responsiveslideshow"],
+[data-widget-type="gallery"],
+[data-name="gallery"],
+[data-widget-type="profile"] {
     &.widget {
         width: 100%;
+        max-width: 1200px;
         margin: 0 auto 20px;
     }
 }
 
-[data-widget-type="profile"].widget {
-    padding: 0 20px;
-    @media @tablet {
-        width: 90%;
-        margin-right: 5%;
-        margin-left: 5%;
-        margin-top: 0;
-        margin-bottom: 20px;
-        padding: 0;
+[data-name="responsiveslideshow"],
+[data-widget-type="gallery"],
+[data-name="gallery"],
+[data-widget-type="profile"] {
+    &.widget {
+        padding: 0 5%;
+        @media @tablet {
+            width: 90%;
+            margin-right: 5%;
+            margin-left: 5%;
+            margin-top: 0;
+            margin-bottom: 20px;
+            padding: 0;
+        }
     }
+}
+
+[data-widget-type="extendednavigation"].widget {
+    padding: 0;
+    width: 100%;
 }
 
 [data-widget-type="profile"].widget {
     margin-bottom: 0;
     padding-bottom: 0;
 }
-
 
 // Slideshow
 // ------------------------
@@ -118,7 +145,6 @@ body {
     .figure {
         display: table;
         width: 100%;
-        background-color: transparent;
     }
     .caption {
         position: relative;
@@ -126,7 +152,6 @@ body {
         vertical-align: middle;
         display: table-cell;
         text-align: center;
-        background-color: rgba(0,0,0,0.1);
         .image-title {
             font-family: @font__feature-headline--font-family;
             color: @color__feature-headline--text;
@@ -177,9 +202,10 @@ body {
         &.icon--pause:before {
             padding: 10px;
             font-size: 12px;
-            color: @color-swatch5;
-            background-color: fade(@color-swatch1, 10%);
-
+            background-color: fade(@color-swatch4, 50%);
+            -webkit-border-radius: 50px;
+            -moz-border-radius: 50px;
+            border-radius: 50px;
         }
     }
     @media @tablet {
@@ -200,12 +226,6 @@ body {
 }
 
 .slide-navigation {
-    .icon--previous:before,
-    .icon--next:after {
-        padding: 30px 8px;
-        color: @color-swatch5;
-        background-color: fade(@color-swatch1, 10%);
-    }
     @media @mobile {
         min-height: inherit;
         .button {
@@ -241,6 +261,25 @@ body {
     margin-bottom: 0;
 }
 
+.gallery__image-link {
+    height: 336px;
+    @media only screen and (max-width: 1025px) {
+        height: 289px;
+    }
+    @media only screen and (max-width: 900px) {
+        height: 254px;
+    }
+    @media only screen and (max-width: 800px) {
+        height: 225px;
+    }
+    @media @tablet {
+        height: 210px;
+    }
+    @media only screen and (max-width: 600px) {
+        height: 160px;
+    }
+}
+
 
 // Margin in header widgets
 // ------------------------
@@ -266,8 +305,7 @@ body {
 legend {
     font-size: @font__h3--font-size;
     line-height: @font__h3--line-height;
-    font-weight: 400;
-    padding: 0 0 20px;
+    padding: 0 0 10px;
 }
 
 .signupform .fieldset {
@@ -360,93 +398,12 @@ button,
 }
 
 
-// Add sticky footer
-// ------------------------
-
-// Sticky footer
-
-.site-container {
-    @media only screen and (min-width : 1024px) {
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        -webkit-flex-wrap: nowrap;
-        -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-        -webkit-justify-content: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-align-content: center;
-        -ms-flex-line-pack: center;
-        align-content: center;
-        -webkit-align-items: stretch;
-        -ms-flex-align: stretch;
-        align-items: stretch;
-        min-height: 100vh;
-    }
-}
-
-.inner-container {
-    @media only screen and (min-width : 1024px) {
-        flex: 1;
-        -webkit-box-flex: 1;
-        -moz-box-flex: 1;
-        -webkit-flex: 1 1 auto;
-        -ms-flex: 1 1 auto;
-        flex: 1 1 auto;
-    }
-}
-
-// Change footer style
+// Footer
 
 .template-footer {
     width: 100%;
     max-width: 1500px;
-    margin: 0 auto;
-    border-top: none;
     @media @mobile {
         padding: 1em 0;
-    }
-    .profile .social-list {
-        margin-top: inherit;
-    }
-    .social-list {
-        margin-top: inherit;
-    }
-    .social-item {
-        background-color: transparent;
-        .social-link:before {
-            font-size: 17px;
-        }
-    }
-    .address-line,
-    h1, h2, h3, h4, p,
-    .icon--phone:before,
-    .phone-number-link,
-    .phone-number {
-        color: @color__body--background;
-        padding-bottom: 0;
-    }
-    // twitter
-    .profile .tweet-item {
-        background-color: transparent;
-    }
-    .account-link,
-    .tweet-item .tweet-content {
-        color: @color__body--background;
-    }
-    // signup form
-    .profile .signupform .form-body {
-        padding: 0;
-    }
-    .profile .signupform .form {
-        background-color: transparent;
-        .fieldset .label {
-            color: @color__body--background;
-            background-color: transparent;
-        }
     }
 }

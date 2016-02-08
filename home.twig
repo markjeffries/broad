@@ -4,12 +4,21 @@
 
         <!-- Template Feature Widget -->
 
-        {{widget('feature', 'featurehome', {
-            "header": "profile",
-            "defaultBgImg": asset('images/feature-bg.jpg'),
-            'positionTopPercentage': '0',
-            'showBtn': false,
-            buttonText: "Lorem Ipsum"
+        {{widget('gallery', 'homepagegallery',
+        {'showDescription': true,
+        'showTitle': true,
+        'images':
+        [
+        {'imageHeight':'500', 'imageWidth':'500', 'url':asset('/images/gallery/1.jpg')},
+        {'imageHeight':'500', 'imageWidth':'500', 'url':asset('/images/gallery/2.jpg')},
+        {'imageHeight':'500', 'imageWidth':'500', 'url':asset('/images/gallery/3.jpg')},
+        {'imageHeight':'500', 'imageWidth':'500', 'url':asset('/images/gallery/4.jpg')},
+        {'imageHeight':'500', 'imageWidth':'500', 'url':asset('/images/gallery/5.jpg')},
+        {'imageHeight':'500', 'imageWidth':'500', 'url':asset('/images/gallery/6.jpg')},
+        {'imageHeight':'500', 'imageWidth':'500', 'url':asset('/images/gallery/7.jpg')},
+        {'imageHeight':'500', 'imageWidth':'500', 'url':asset('/images/gallery/8.jpg')},
+        {'imageHeight':'500', 'imageWidth':'500', 'url':asset('/images/gallery/9.jpg')}
+        ]
         })|raw}}
 
         <!-- Main Widget Zone -->
