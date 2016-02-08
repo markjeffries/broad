@@ -8,7 +8,7 @@
 
 
 // Global Widget
-@value__widget--width: 800px;
+@value__widget--width: 960px;
 @value__widget--margin--desktop: 0 auto 20px;
 
 
@@ -34,6 +34,7 @@
 
 
 // Body Background
+// -------------------------------
 
 html {
     background-color: darken(@color__body--background, 70%);
@@ -51,7 +52,7 @@ body {
 
 
 // Header
-// ------------------------
+// -------------------------------
 
 .template-header {
     padding: 3em 0 1em;
@@ -69,7 +70,7 @@ body {
 }
 
 // Extended Nav
-// ------------------------
+// -------------------------------
 
 .extendednavigation {
     @media only screen and (min-width: 769px) {
@@ -78,13 +79,8 @@ body {
     }
 }
 
-// .navigation-toggle {
-//     width: 44px;
-//     margin: 0 auto;
-// }
-
 // Feature
-// ------------------------
+// -------------------------------
 .feature {
     .content-wrap {
         border: 0;
@@ -95,34 +91,7 @@ body {
 }
 
 // Full width widgets
-// ------------------------
-[data-name="responsiveslideshow"],
-[data-widget-type="gallery"],
-[data-name="gallery"],
-[data-widget-type="profile"] {
-    &.widget {
-        width: 100%;
-        max-width: 1200px;
-        margin: 0 auto 20px;
-    }
-}
-
-[data-name="responsiveslideshow"],
-[data-widget-type="gallery"],
-[data-name="gallery"],
-[data-widget-type="profile"] {
-    &.widget {
-        padding: 0 5%;
-        @media @tablet {
-            width: 90%;
-            margin-right: 5%;
-            margin-left: 5%;
-            margin-top: 0;
-            margin-bottom: 20px;
-            padding: 0;
-        }
-    }
-}
+// -------------------------------
 
 [data-widget-type="extendednavigation"].widget {
     padding: 0;
@@ -134,8 +103,20 @@ body {
     padding-bottom: 0;
 }
 
+// Margin in header widgets
+// -------------------------------
+
+[data-widget-type="extendednavigation"],
+[data-widget-type="logo"],
+[data-widget-type="companyname"] {
+    &.widget {
+        margin: 0 auto;
+    }
+}
+
 // Slideshow
-// ------------------------
+// -------------------------------
+
 .responsiveslideshow {
     position: relative;
     .caption {
@@ -188,9 +169,8 @@ body {
     }
 }
 
-
 // Gallery Image Captions
-// ----------------------
+// -------------------------------
 
 // Hide Caption
 .gallery__caption {
@@ -223,7 +203,7 @@ body {
 }
 
 .gallery__image-link {
-    height: 336px;
+    height: 307px;
     @media only screen and (max-width: 1025px) {
         height: 289px;
     }
@@ -241,19 +221,9 @@ body {
     }
 }
 
-
-// Margin in header widgets
-// ------------------------
-[data-widget-type="extendednavigation"],
-[data-widget-type="logo"],
-[data-widget-type="companyname"] {
-    &.widget {
-        margin: 0 auto;
-    }
-}
-
 // Forms
-// --------------------------
+// -------------------------------
+
 @color__form--background: transparent;
 @color__form-legend--background: transparent;
 
@@ -266,7 +236,8 @@ body {
 legend {
     font-size: @font__h3--font-size;
     line-height: @font__h3--line-height;
-    padding: 0 0 10px;
+    font-weight: 400;
+    padding: 0 0 20px;
 }
 
 .signupform .fieldset {
@@ -294,8 +265,6 @@ legend {
 .basket-item-image .image-link {
     background-color: transparent;
 }
-
-
 
 // Borders and background in forms
 // -------------------------------
@@ -336,6 +305,7 @@ td,
 }
 
 // Cats and Tags
+// -------------------------------
 
 .post-attributes,
 .product-attributes {
@@ -344,14 +314,19 @@ td,
     padding: 0;
 }
 
-
-// Footer
+// Content Widget
 // -------------------------------
 
-.template-footer {
-    width: 100%;
-    max-width: 1500px;
-    @media @mobile {
-        padding: 1em 0;
+.content {
+    max-width: 600px;
+    width: auto;
+    margin: 0 auto;
+}
+
+.responsivecolumns {
+    .content {
+        max-width: inherit;
+        width: 100%;
     }
 }
+
