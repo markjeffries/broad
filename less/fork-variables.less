@@ -37,7 +37,7 @@
 // -------------------------------
 
 html {
-    background-color: darken(@color__body--background, 70%);
+    background-color: darken(@color__body--background, 50%);
     @media only screen and (max-width: 1500px) {
         background-color: darken(@color__body--background, 10%);
     }
@@ -46,11 +46,12 @@ html {
 body {
     width: 100%;
     max-width: 1500px;
-    margin: 10px auto 0;
+    margin: 20px auto 0;
     background-color: @color__body--background;
     @media only screen and (max-width: 1500px) {
         margin: 0 auto;
-        border-top: 5px solid darken(@color__body--background, 70%);
+        border: 5px solid darken(@color__body--background, 50%);
+        border-bottom: none;
     }
 }
 
@@ -85,6 +86,7 @@ body {
 
 // Feature
 // -------------------------------
+
 .feature {
     .content-wrap {
         border: 0;
@@ -111,6 +113,24 @@ body {
     &.widget {
         margin: 0 auto;
     }
+}
+
+// Images Caption
+// -------------------------------
+
+.image-title {
+    color: @color__h3--text;
+    font-family: @font__h4--font-family;
+    font-size: @font__h4--font-size;
+    font-weight: @font__h4--font-weight;
+    line-height: @font__h4--line-height;
+}
+.image-description {
+    color: @color__image-description--text;
+    font-family: @font__p--font-family;
+    font-size: @font__p--font-size;
+    font-weight: @font__p--font-weight;
+    line-height: @font__p--line-height;
 }
 
 // Slideshow
@@ -140,6 +160,7 @@ body {
         }
     }
 }
+
 // Slideshow buttons
 
 .slide-navigation {
@@ -386,11 +407,24 @@ td,
     padding: 0 0 10px;
 }
 
+// Buttons
+// -------------------------------
+
+
 button,
 .button {
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
     border-radius: 2px;
+}
+
+.read-more {
+    color: @color__button--text;
+    font-family: @font__button--font-family;
+    font-size: @font__button--font-size;
+    font-weight: @font__button--font-weight;
+    line-height: @font__button--line-height;
+    letter-spacing: @font__button--letter-spacing;
 }
 
 // Cats and Tags
@@ -416,6 +450,20 @@ button,
     .content {
         max-width: inherit;
         width: 100%;
+    }
+}
+
+// Twitter
+// -------------------------------
+
+.tweet-item {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    .avatar-image {
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        border-radius: 50px;
     }
 }
 
@@ -483,18 +531,5 @@ button,
             color: @color__h4--text;
             background-color: transparent;
         }
-    }
-}
-
-// Twitter
-
-.tweet-item {
-    background-color: transparent;
-    border: none;
-    padding: 0;
-    .avatar-image {
-        -webkit-border-radius: 50px;
-        -moz-border-radius: 50px;
-        border-radius: 50px;
     }
 }

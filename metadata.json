@@ -23,8 +23,8 @@
         "Swatch 1": {
             "color1":"#ffffff",
             "color2":"#07C7E1",
-            "color3":"#4d4d4d",
-            "color4":"#4e4e4e",
+            "color3":"#565555",
+            "color4":"#565555",
             "color5":"#95969A",
             "color6":"#95969A",
             "color7":"#ffffff"
@@ -65,7 +65,7 @@
             "letter-spacing": "0px"
         },
         "font5": {
-            "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
+            "font-family": "\"Georgia\", serif",
             "font-size": "17px",
             "font-weight": "400",
             "line-height": "27px",
@@ -85,11 +85,11 @@
          },
         "font7": {
             "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
-            "font-size": "17px",
+            "font-size": "15px",
             "font-weight": "400",
-            "line-height": "27px",
+            "line-height": "25px",
             "color": "@color-swatch7",
-            "letter-spacing": "0px",
+            "letter-spacing": "1px",
             "background-color": "@color-swatch3",
             "background-color-hover": "@color-swatch2"
         },
@@ -102,7 +102,7 @@
             "letter-spacing": "0px"
         },
         "font9": {
-            "font-family": "\"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
+            "font-family": "\"Georgia\", serif",
             "font-size": "18px",
             "font-weight": "400",
             "line-height": "28px",
