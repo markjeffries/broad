@@ -37,9 +37,16 @@
 // -------------------------------
 
 html {
+    height: 100%;
     background-color: darken(@color__body--background, 50%);
     @media only screen and (max-width: 1500px) {
         background-color: darken(@color__body--background, 10%);
+        border: 8px solid darken(@color__body--background, 50%);
+        border-bottom: none;
+    }
+    @media @tablet {
+        border: 5px solid darken(@color__body--background, 50%);
+        border-bottom: none;
     }
 }
 
@@ -50,8 +57,6 @@ body {
     background-color: @color__body--background;
     @media only screen and (max-width: 1500px) {
         margin: 0 auto;
-        border: 5px solid darken(@color__body--background, 50%);
-        border-bottom: none;
     }
 }
 
