@@ -239,8 +239,9 @@
         "ecommerce": {
             "color__ecomproductslist-label--text": "@color__form-label--text",
             "color__ecomproductslist-product-title--text": "@font-swatch3-color",
+            "color__ecomproductslist-product-price--text": "@color__p--text",
+            "color__ecomproductslist-filters--background": "darken(@color__body--background, 3%)",
             "color__ecomproduct--background": "darken(@color__body--background, 3%)",
-            "color__ecomproduct-images--background": "transparent",
             "color__ecomproduct-title--text": "@font-swatch1-color",
             "color__ecomproduct-price--text": "@font-swatch3-color",
             "color__ecombasket-button--background": "@color__primary",
