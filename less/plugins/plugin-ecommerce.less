@@ -69,7 +69,7 @@
 .ecomproduct {
     .image-link,
     .gallery-item {
-        background-color: @color__ecomproduct-images--background;
+        background-color: transparent;
     }
     .product-title {
         color: @color__ecomproduct-title--text;
@@ -146,6 +146,8 @@
 // Ecom forms
 
 // Styles are set in 'less > template.less' (4. #Forms)
+
+
 
 
 
@@ -239,6 +241,14 @@
     }
 }
 
+.product-item-image,
+.product-item-image .image-link,
+.product-gallery .gallery-item,
+.product-image .image-link,
+.basket-item-image .image-link {
+    background-color: transparent;
+}
+
 // Product Details
 
 .ecomproductslist,
@@ -256,6 +266,7 @@
 
 .product-item-price {
     font-weight: 700;
+    color: @color__ecomproductslist-product-price--text;
 }
 
 .ecomproductslist,
