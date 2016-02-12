@@ -150,7 +150,6 @@
 
 
 
-
 // -----------------------------
 // 2. #Product List
 // -----------------------------
@@ -168,7 +167,13 @@
 
 .listing-title {
     padding: 0 0 1.8em;
-    color: @color-swatch5;
+    color: @color__p--text;
+    @media @tablet {
+        padding: 0 0 20px;
+    }
+    @media only screen and (max-width: 600px) {
+        padding: 0 0 10px;
+    }
 }
 
 // Product Filter
@@ -176,9 +181,6 @@
 
 // Styles are set in 'less > template.less' (4. #Forms)
 
-.listing-order {
-    padding: 20px 0 36px;
-}
 
 // Products List
 // -------------
@@ -221,7 +223,7 @@
     width: 32%;
     margin-bottom: 20px;
     // Display 100% at mobile
-    @media @mobile {
+    @media only screen and (max-width: 600px) {
         width: 100%;
     }
 }
@@ -233,7 +235,7 @@
     .product-item-image,
     .product-item-image .image-link,
     .product-item-image .image {
-        @media @mobile {
+        @media only screen and (max-width: 600px) {
             max-height: 200px;
             height: auto;
             line-height: normal;
@@ -261,6 +263,21 @@
         font-weight: @font__p--font-weight;
         color: @color__h3--text;
         letter-spacing: @font__p--letter-spacing;
+    }
+}
+
+.ecomproductslist,
+.ecomfeaturedproducts {
+    .listing-order {
+        color: @color__p--text;
+        padding: 20px 0 36px;
+        @media @tablet {
+            font-size: bkscale(@font__p--font-size,0.9);
+            line-height: bkscale(@font__p--line-height,0.9);
+        }
+        @media only screen and (max-width: 600px) {
+            padding: 10px 0 20px;
+        }
     }
 }
 
