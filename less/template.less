@@ -397,7 +397,7 @@ td {
         padding: 20px 5px 20px 20px;
     }
     @media only screen and (max-width: 600px) {
-        padding: 0 20px 20px;
+        padding: 20px 20px 0;
     }
 }
 
@@ -407,45 +407,43 @@ td {
         padding: 20px 20px 20px 5px;
     }
     @media only screen and (max-width: 600px) {
-        padding: 20px 20px 0;
+        padding: 0 20px 20px;
     }
 }
 
 // Flexbox form on Desktop
-@media only screen and (min-width: 600px) {
-    .fieldset--search {
-        -webkit-box-ordinal-group: 2;
-        -moz-box-ordinal-group: 2;
-        -webkit-order: 1;
-        -ms-flex-order: 1;
-        order: 1;
-        -webkit-box-flex: 0;
-        -moz-box-flex: 0;
-        -webkit-flex: 0 1 auto;
-        -ms-flex: 0 1 auto;
-        flex: 0 1 auto;
-        -webkit-align-self: auto;
-        -ms-flex-item-align: auto;
-        align-self: auto;
-        .form-group:first-child {
-            margin-right: 10px;
-        }
+.fieldset--search {
+    -webkit-box-ordinal-group: 2;
+    -moz-box-ordinal-group: 2;
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1;
+    -webkit-box-flex: 0;
+    -moz-box-flex: 0;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+    .form-group:first-child {
+        margin-right: 10px;
     }
-    .fieldset--filters {
-        -webkit-box-ordinal-group: 1;
-        -moz-box-ordinal-group: 1;
-        -webkit-order: 0;
-        -ms-flex-order: 0;
-        order: 0;
-        -webkit-box-flex: 0;
-        -moz-box-flex: 0;
-        -webkit-flex: 1 1 70%;
-        -ms-flex: 1 1 70%;
-        flex: 1 1 70%;
-        -webkit-align-self: auto;
-        -ms-flex-item-align: auto;
-        align-self: auto;
-    }
+}
+.fieldset--filters {
+    -webkit-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 1;
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-box-flex: 0;
+    -moz-box-flex: 0;
+    -webkit-flex: 1 1 70%;
+    -ms-flex: 1 1 70%;
+    flex: 1 1 70%;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
 }
 
 // Flexbox form on Tablet
