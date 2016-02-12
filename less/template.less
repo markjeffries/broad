@@ -37,9 +37,18 @@ body {
     }
 }
 
-.brand .widget {
-    margin: 0 auto 0;
+.template-header,
+.template-footer {
+    width: 90%;
+    margin: 0 5%;
+    @media only screen and (min-width: 1140px) {
+        width: 100%;
+        margin: 0 auto;
+    }
 }
+
+
+
 
 // Default Page
 // ------------
@@ -48,7 +57,7 @@ body {
     .template-header {
         border-bottom: 3px solid darken(@color__body--background, 8%);
         margin-bottom: 2.5em;
-        @media @mobile {
+        @media @tablet {
             margin-bottom: 20px;
         }
     }
@@ -63,10 +72,14 @@ body {
 
 
 .template-footer {
-    margin: 4em 0 0;
+    margin: 2em auto 1em;
     padding: 2em 0;
     border-top: 3px solid @color__footer--border;
     background-color: @color__footer--background;
+    @media @tablet {
+        margin: 1em auto;
+        padding: 1em 0;
+    }
 }
 
 
