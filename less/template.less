@@ -32,11 +32,23 @@ body {
     @media @tablet {
         padding: 3em 0 2.5em;
     }
+    @media @mobile {
+        padding: 2.5em 0 1.5em;
+    }
 }
 
-.brand .widget {
-    margin: 0 auto 0;
+.template-header,
+.template-footer {
+    width: 90%;
+    margin: 0 5%;
+    @media only screen and (min-width: 1140px) {
+        width: 100%;
+        margin: 0 auto;
+    }
 }
+
+
+
 
 // Default Page
 // ------------
@@ -45,6 +57,9 @@ body {
     .template-header {
         border-bottom: 3px solid darken(@color__body--background, 8%);
         margin-bottom: 2.5em;
+        @media @tablet {
+            margin-bottom: 20px;
+        }
     }
 }
 
@@ -57,10 +72,14 @@ body {
 
 
 .template-footer {
-    margin: 4em 0 0;
+    margin: 2em auto 1em;
     padding: 2em 0;
     border-top: 3px solid @color__footer--border;
     background-color: @color__footer--background;
+    @media @tablet {
+        margin: 1em auto;
+        padding: 1em 0;
+    }
 }
 
 
@@ -193,15 +212,13 @@ td {
 
 // Signup Form
 // Blog Search
-// Product Search
 // --------------------------------
 
 
 // Style for tablet and desktop
 @media only screen and (min-width : 480px) {
     .signupform__form-body,
-    .blogsearch__form-body,
-    .ecomproductslist__form-body {
+    .blogsearch__form-body {
         display: -webkit-box;
         display: -moz-box;
         display: -ms-flexbox;
@@ -242,32 +259,9 @@ td {
         align-self: auto;
     }
 
-    .ecomproductslist__form-group {
-        margin-bottom: 0;
-    }
-
-    .fieldset--search .form-group:first-child {
-        -ms-flex: 1 1 auto;
-        -webkit-flex: 1 1 auto;
-        flex: 1 1 auto;
-        -webkit-align-self: flex-start;
-        -ms-flex-item-align: start;
-        align-self: flex-start;
-    }
-
-    .fieldset--search .form-group:last-child {
-        -ms-flex: 0 1 auto;
-        -webkit-flex: 0 1 auto;
-        flex: 0 1 auto;
-        -webkit-align-self: flex-start;
-        -ms-flex-item-align: start;
-        align-self: flex-start;
-    }
-
     .form .button {
         &.signupform__button,
-        &.blogsearch__button,
-        &.ecomproductslist__button {
+        &.blogsearch__button {
             min-height: 44px;
             padding: 0 18px;
             margin-left: 10px;
@@ -349,18 +343,6 @@ td {
 // Ecom forms
 // --------------------------------
 
-.form {
-    &.product__form,
-    &.summary-form {
-        padding: 0;
-        margin-bottom: 0;
-        background-color: transparent;
-        legend {
-            margin-bottom: 0;
-        }
-    }
-}
-
 
 // Product Filters
 
@@ -375,27 +357,12 @@ td {
     }
     .legend {
         display: none;
-        padding: 10px 20px;
-        text-align: center;
-        font-weight: 400;
-        background-color: @color__form-legend--background;
     }
-    .fieldset--search .label {
-        display: none;
+    .label {
+        font-size: bkscale(@font__p--font-size,0.9);
+        line-height: bkscale(@font__p--line-height,0.9);
     }
-    .fieldset--search .form-body {
-        padding: 30px 30px 15px;
-    }
-    .fieldset--filters .form-body {
-        padding: 15px 30px 30px;
-    }
-    .form-body {
-        background-color: @color__ecomproductslist-filters--background;
-    }
-    @media @mobile {
-        .input--search {
-            margin-bottom: 20px;
-        }
+    @media only screen and (max-width : 600px) {
         .form-group,
         .select,
         .button {
@@ -404,20 +371,168 @@ td {
     }
 }
 
-// Clear button
+.ecomproductslist .form,// Ecom Form
+.ecomproductslist .fieldset--filters .form-body,// Ecom Filters
+.ecomproductslist .fieldset--search .form-body { // Ecom Search
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-box-align: end;
+    -moz-box-align: end;
+    -webkit-align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+}
 
-.product-filters .form .button.button--clear {
+.ecomproductslist .fieldset--filters .form-body {
+    padding: 20px 5px 20px 40px;
+    @media @tablet {
+        padding: 20px 5px 20px 20px;
+    }
+    @media only screen and (max-width: 600px) {
+        padding: 20px 20px 0;
+    }
+}
+
+.ecomproductslist .fieldset--search .form-body {
+    padding: 20px 40px 20px 5px;
+    @media @tablet {
+        padding: 20px 20px 20px 5px;
+    }
+    @media only screen and (max-width: 600px) {
+        padding: 0 20px 20px;
+    }
+}
+
+// Flexbox form on Desktop
+.fieldset--search {
+    -webkit-box-ordinal-group: 2;
+    -moz-box-ordinal-group: 2;
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1;
+    -webkit-box-flex: 0;
+    -moz-box-flex: 0;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+    .form-group:first-child {
+        margin-right: 10px;
+    }
+}
+.fieldset--filters {
+    -webkit-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 1;
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-box-flex: 0;
+    -moz-box-flex: 0;
+    -webkit-flex: 1 1 70%;
+    -ms-flex: 1 1 70%;
+    flex: 1 1 70%;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+}
+
+// Flexbox form on Tablet
+.ecomproductslist .form,// Ecom Form
+.ecomproductslist .fieldset--filters .form-body,// Ecom Filters
+.ecomproductslist .fieldset--search .form-body { // Ecom Search
+    @media only screen and (max-width: 600px)  {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-direction: normal;
+        -moz-box-direction: normal;
+        -webkit-box-orient: vertical;
+        -moz-box-orient: vertical;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        -webkit-box-pack: start;
+        -moz-box-pack: start;
+        -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        -webkit-align-content: stretch;
+        -ms-flex-line-pack: stretch;
+        align-content: stretch;
+        -webkit-box-align: stretch;
+        -moz-box-align: stretch;
+        -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
+        align-items: stretch;
+        .fieldset--search,
+        .fieldset--filters {
+            -webkit-flex: 0 1 auto;
+            -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+        }
+        .form-group:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+// Ecom Clear-Button
+// -----------------
+
+.ecomproductslist .form .fieldset--search .button--clear {
+    margin-left: 10px;
     white-space: nowrap;
-    margin-left: 13px;
     text-align: center;
-    @media @mobile {
+    @media only screen and (max-width : 600px) {
         margin-left: 0;
         margin-top: 10px;
     }
 }
 
+// Three Columns
+.columns-three-left,
+.columns-three-middle,
+.columns-three-right,
+// Four Columns
+.columns-four-first,
+.columns-four-second,
+.columns-four-third,
+.columns-four-fourth {
+    .ecomproductslist .form .fieldset--search .button--clear {
+        margin-left: 0;
+    }
+}
+
 // Style for tablet and desktop
-@media only screen and (min-width : 480px) {
+@media only screen and (min-width : 600px) {
     .ecomproductslist .fieldset--filters .form-group {
         -ms-flex: 1 1 25%;
         -webkit-flex: 1 1 25%;
@@ -455,8 +570,7 @@ td {
         }
     }
     .signupform__form-body,
-    .blogsearch__form-body,
-    .ecomproductslist__form-body  {
+    .blogsearch__form-body {
         display: block;
         padding: 20px 30px;
         @media @mobile {
@@ -465,8 +579,7 @@ td {
     }
     .form .button {
         &.signupform__button,
-        &.blogsearch__button,
-        &.ecomproductslist__button {
+        &.blogsearch__button {
             margin-left: 0;
             .border-radius(3px);
         }
