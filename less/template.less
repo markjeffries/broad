@@ -32,6 +32,9 @@ body {
     @media @tablet {
         padding: 3em 0 2.5em;
     }
+    @media @mobile {
+        padding: 2.5em 0 1.5em;
+    }
 }
 
 .brand .widget {
@@ -45,6 +48,9 @@ body {
     .template-header {
         border-bottom: 3px solid darken(@color__body--background, 8%);
         margin-bottom: 2.5em;
+        @media @mobile {
+            margin-bottom: 20px;
+        }
     }
 }
 
