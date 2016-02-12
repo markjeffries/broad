@@ -491,24 +491,11 @@ td {
 // -----------------
 
 .ecomproductslist .form .fieldset--search .button--clear {
-    margin-left: 48px;
-    padding: 10px 20px;
-    @media @tablet {
-        margin-left: 20px;
-    }
-    @media @mobile {
+    margin-left: 10px;
+    white-space: nowrap;
+    text-align: center;
+    @media only screen and (min-width : 600px) {
         margin-left: 0;
-    }
-}
-
-// Two Columns
-.columns-two-left,
-.columns-two-right {
-    .ecomproductslist .form .fieldset--search .button--clear {
-        margin-left: 20px;
-        @media @tablet {
-            margin-left: 0;
-        }
     }
 }
 
