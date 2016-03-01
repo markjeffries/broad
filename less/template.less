@@ -459,10 +459,13 @@ td {
     align-self: auto;
 }
 
-// Flexbox form on Tablet
+// Flexbox form on Tablet & Responsive Columns
 .ecomproductslist .form,// Ecom Form
 .ecomproductslist .fieldset--filters .form-body,// Ecom Filters
-.ecomproductslist .fieldset--search .form-body { // Ecom Search
+.ecomproductslist .fieldset--search .form-body, // Ecom Search
+.responsivecolumns .ecomproductslist .form, // Responsive Columns
+.responsivecolumns .ecomproductslist .fieldset--filters .form-body,
+.responsivecolumns .ecomproductslist .fieldset--search .form-body {
     @media only screen and (max-width: 600px)  {
         display: -webkit-box;
         display: -moz-box;
