@@ -506,6 +506,9 @@ td {
 
 // Ecom form on Responsive Columns
 .responsivecolumns {
+    .listing-title {
+        padding: 0px 0 20px;
+    }
     .ecomproductslist .form,// Ecom Form
     .ecomproductslist .fieldset--filters .form-body,// Ecom Filters
     .ecomproductslist .fieldset--search .form-body { // Ecom Search
@@ -544,6 +547,18 @@ td {
             flex: 0 1 auto;
         }
         .form-group:last-child {
+            margin-right: 0;
+        }
+    }
+    .ecomproductslist .fieldset--filters .form-body {
+        padding: 20px 10px;
+        .form-group {
+            margin-right: 0;
+        }
+    }
+    .ecomproductslist .fieldset--search .form-body {
+        padding: 20px 10px;
+        .form-group:first-child {
             margin-right: 0;
         }
     }
