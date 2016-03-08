@@ -50,8 +50,18 @@
     }
     .image {
         display: block;
+        max-height: 600px;
         vertical-align: top;
         margin: 0 auto;
+        @media only screen and (max-width: 900px) {
+            max-height: 450px;
+        }
+        @media only screen and (max-width: 600px) {
+            max-height: 350px;
+        }
+        @media @mobile {
+            max-height: 250px;
+        }
     }
 }
 
